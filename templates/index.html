@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../static/images/vision_icon.png" />
+    <title>Image Dehazing</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #2c2c2c;
+            color: #f5f5f5;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            background: -webkit-linear-gradient(16deg, #4b90ff, #c7f61c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative; /* Make the span the base layer */
+            z-index: 1; /* Ensures the text is above the black background */
+            padding: 2px 4px;
+            font-size: 30px;
+            justify-content: center;
+            text-align: center;
+        }
+        .header img {
+            margin-right: 10px; /* Add some spacing between the image and the text */
+        }
+        .heading_test a{
+            color: #34cf44;
+            font-style: italic;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .image-container div {
+            margin: 0 10px;
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 400px;
+            border: 2px solid #666;
+            border-radius: 12px;
+            padding: 5px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+        }
+        button, label.custom-button {
+            background-color: #ff5722;
+            color: #ffffff;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.2s;
+            display: inline-block;
+        }
+        button:hover, label.custom-button:hover {
+            background-color: #e64a19;
+            transform: scale(1.05);
+        }
+        #fileInput {
+            display: none; /* Hide the default file input */
+        }
+        .samples-container {
+            margin-top: 50px;
+        }
+        .samples-container h2 {
+            margin-bottom: 20px;
+        }
+        .samples-container img {
+            max-width: 200px;
+            margin: 0 10px;
+            border: 2px solid #444;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .samples-container img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+        }
+        .summary-container {
+            margin-top: 50px;
+            font-size: 16px;
+            color: #ccc;
+        }
+        .summary-container a {
+            color: #ff5722;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .summary-container a:hover {
+            text-decoration: underline;
+        }
+        .summary-container .github-icon {
+            font-size: 20px;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+    </style>
+    <!-- Add Font Awesome for the GitHub icon -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        <img src="../static/images/vision_icon.png" alt="Icon" class="Icon" width="100">
+        <h1>Image Dehazing on Indoor Images</h1>
+    </div>
+    <h3 class="heading_test">A project made by <a href="https://www.linkedin.com/in/aditsg26/" target="_blank"> Aditya Singh </a> and <a href="https://www.linkedin.com/in/ramandeep-singh-makkar" target="_blank">Ramandeep Singh Makkar</a></h3>
+    <p>You can select your own image or use below samples to see our project working, but pls use ONLY INDOOR images as we were only able to train on them for now 🥲</p>
+    <p>After selecting, click on the process button to see the results 😮</p>
+
+
+    <form id="uploadForm" action="http://localhost:8000/upload" method="post" enctype="multipart/form-data">
+        <!-- Styled Browse Button -->
+        <label for="fileInput" class="custom-button">Browse</label>
+        <input type="file" name="file" id="fileInput" accept="image/*">
+        <input type="hidden" name="sampleImage" id="sampleImage"> <!-- Hidden input for sample images -->
+        <br><br>
+        <button type="submit">Process</button>
+    </form>
+
+    <div class="image-container" id="imagePreview" style="display: none;">
+        <div>
+            <h3>Original Image</h3>
+            <img id="originalImage" src="#" alt="Original Image">
+        </div>
+        <div id="processedImageContainer" style="display: none;">
+            <h3>Processed Image</h3>
+            <div id="processingMessage" style="color: #ccc;">Processing Image...</div>
+            <img id="processedImage" src="#" alt="Processed Image" style="display: none;">
+        </div>
+    </div>
+
+    <!-- Sample Images Section -->
+    <div class="samples-container">
+        <h2>Try using these samples</h2>
+        <img src="../static/images/s1.jpg" alt="Sample 1" class="sample-image">
+        <img src="../static/images/s2.png" alt="Sample 2" class="sample-image">
+        <img src="../static/images/s3.png" alt="Sample 3" class="sample-image">
+        <img src="../static/images/s4.png" alt="Sample 4" class="sample-image">
+    </div>
+
+    <!-- Summary Section -->
+    <div class="summary-container">
+        <h2>We are still refining our project.</h2>
+        <p>As we lack hardware resources, we will slowly refine our model to dehaze images better without any faults.</p>
+        <p>You can look up our project in the Github Link below, thank you for trying our project 😊</p>
+        <a href="https://github.com/Fairtexas5/Image_Dehazing-using-Multi-Attention-FFAnet" target="_blank">
+            <i class="fab fa-github github-icon"></i>GitHub Repository
+        </a>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById("fileInput");
+        const sampleImages = document.querySelectorAll(".sample-image");
+        const sampleImageInput = document.getElementById("sampleImage");
+        const originalImage = document.getElementById("originalImage");
+        const processedImage = document.getElementById("processedImage");
+        const imagePreview = document.getElementById("imagePreview");
+        const processedImageContainer = document.getElementById("processedImageContainer");
+        const processingMessage = document.getElementById("processingMessage");
+    
+        let selectedSampleURL = null; // To store the selected sample image URL
+    
+        // Handle file upload preview
+        fileInput.addEventListener("change", (event) => {
+            sampleImageInput.value = ""; // Clear the sample image if a file is uploaded
+            selectedSampleURL = null;
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    originalImage.src = e.target.result;
+                    imagePreview.style.display = "flex"; // Show preview
+                    processedImageContainer.style.display = "none"; // Hide processed image
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    
+        // Handle sample image selection
+        sampleImages.forEach((img) => {
+            img.addEventListener("click", () => {
+                const samplePath = img.src.split("/static/images/")[1]; // Extract filename
+                selectedSampleURL = `/static/images/${samplePath}`; // Use relative path
+                originalImage.src = img.src; // Update preview
+                imagePreview.style.display = "flex"; // Show preview
+                processedImageContainer.style.display = "none"; // Hide processed image
+
+                // Clear the file input (if previously used)
+                fileInput.value = "";
+            });
+        });
+
+    
+        // Handle form submission
+        document.getElementById("uploadForm").addEventListener("submit", (event) => {
+            event.preventDefault();
+            const formData = new FormData();
+
+            if (selectedSampleURL) {
+                // If a sample image is selected, send its URL
+                formData.append("sampleImageURL", selectedSampleURL);
+            } else {
+                // If an image is uploaded via the file input, include it
+                const file = fileInput.files[0];
+                if (file) {
+                    formData.append("file", file);
+                } else {
+                    alert("Please select or upload an image.");
+                    return;
+                }
+            }
+
+            // Show "Processing Image..." message
+            processedImageContainer.style.display = "block";
+            processingMessage.style.display = "block";
+            processedImage.style.display = "none";
+
+            // Send the form data to the backend
+            fetch("/upload", {
+                method: "POST",
+                body: formData,
+            })
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error("Processing failed. Please try again.");
+                    }
+                    return response.blob();
+                })
+                .then((blob) => {
+                    const processedImageURL = URL.createObjectURL(blob);
+                    processedImage.src = processedImageURL;
+                    processedImage.style.display = "block"; // Show processed image
+                    processingMessage.style.display = "none"; // Hide "Processing Image..."
+                })
+                .catch((error) => {
+                    alert(error.message);
+                    processingMessage.style.display = "none"; // Hide "Processing Image..." in case of error
+                });
+        });
+
+
+    </script>
+    
+</body>
+
+</html>
