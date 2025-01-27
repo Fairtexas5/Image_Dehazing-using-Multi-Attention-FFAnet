@@ -10,17 +10,30 @@
 
 ---------------------------------------------------------------
 
-The FFA model is trained on <a href="https://www.kaggle.com/datasets/balraj98/indoor-training-set-its-residestandard" target="_blank" rel="noopener noreferrer">RESIDE Dataset</a>
+Our proposed FFA model is trained on <a href="https://www.kaggle.com/datasets/balraj98/indoor-training-set-its-residestandard" target="_blank" rel="noopener noreferrer">RESIDE Dataset</a>
 
-The results from 
+The results formulated below are from 
+<i>Boyi Li, Wenqi Ren, Dengpan Fu, Dacheng Tao, Dan Feng, Wenjun Zeng, and Zhangyang Wang. 2019. Benchmarking Single-Image Dehazing and Beyond. Trans. Img. Proc. 28, 1 (Jan. 2019), 492–505. https://doi.org/10.1109/TIP.2018.2867951<i>
 
-### Metrics update
-|Methods|Indoor(PSNR/SSIM)|Outdoor(PSNR/SSIM)|
-|-|-|-|
-|DCP|16.62/0.8179|19.13/0.8148|
-|AOD-Net|19.06/0.8504|20.29/0.8765|
-|DehazeNet|21.14/0.8472|22.46/0.8514|
-|GFN|22.30/0.8800|21.55/0.8444|
-|GCANet|30.23/0.9800|-/-|
-|Ours|36.39/0.9886|33.57/0.9840|
-### Usage
+|Models|Indoor(PSNR/SSIM)|
+|-|-|
+|DCP|16.62/0.8179|
+|AOD-Net|19.06/0.8504|
+|DehazeNet|21.14/0.8472|
+|GFN|22.30/0.8800|
+|GCANet|30.23/0.9800|
+|Ours|36.07/0.9874|
+
+Since working with only CPU, we are yet to refine the model more and make our results best.
+Below are the results of our model:
+
+<img src="results/results.png" width=500px>
+
+#### Also we have created the flask website for the same, It might stop working after January 2025 as its subscription will end,
+#### so we have made the working of our website below:
+
+This is our browse option:
+<img src="results/browse.gif">
+
+We also have added sample images to process directly:
+<img src="results/sample.gif">
