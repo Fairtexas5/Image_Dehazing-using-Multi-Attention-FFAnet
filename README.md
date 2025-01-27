@@ -33,7 +33,7 @@ Below are the results of our model:
 #### so we have made the working of our website below:
 
 This is our browse option:
-<img src="results/browse.gif">
+<img src="results/browse.gif" name = "browse">
 
 We also have added sample images to process directly:
-<img src="results/sample.gif">
+<img src="results/sample.gif" name = "sample">
