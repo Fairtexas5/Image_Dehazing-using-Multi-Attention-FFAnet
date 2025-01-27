@@ -30,7 +30,7 @@ Below are the results of our model:
 <img src="results/results.png" width=500px>
 
 #### Also we have created the flask website for the same, It might stop working after January 2025 as its subscription will end,
-#### so we have recorded the working of our website below:
+#### so we have recorded the working of our website below (takes some time to load):
 
 This is our browse option:
 <img src="results/browse.gif" name = "browse">
