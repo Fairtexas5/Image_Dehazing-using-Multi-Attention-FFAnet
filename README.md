@@ -2,10 +2,13 @@
  
 ---------------------------------------------------------------
 
+### A project made by **Aditya Singh** [![LinkedIn](https://github.com/CLorant/readme-social-icons/blob/main/large/filled/linkedin.svg)](http://www.linkedin.com/in/aditsg26) [![Gmail](https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg)](mailto:aditsg26@gmail.com) and **Ramandeep Singh Makkar** [![LinkedIn](https://github.com/CLorant/readme-social-icons/blob/main/large/filled/linkedin.svg)](https://www.linkedin.com/in/ramandeep-singh-makkar) [![Gmail](https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg)](mailto:ramandeepsinghmakkar199@gmail.com)
+
+in an Event **Clear Vision** hosted by *Center of Excellence in Artificial Intelligence for Education (CoE-AIE) at JUIT*
 
 <h3 class="heading_test">A project made by 
 **Aditya Singh** [<img align="center" src="https://github.com/CLorant/readme-social-icons/blob/main/large/filled/linkedin.svg" alt="LinkedIn" height="15" width="20" />](http://www.linkedin.com/in/aditsg26)[<img align="center" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" height="15" width="20" />](mailto:aditsg26@gmail.com) and **Ramandeep Singh Makkar** [<img align="center" src= "https://github.com/CLorant/readme-social-icons/blob/main/large/filled/linkedin.svg" alt="LinkedIn" height="15" width="20" />](https://www.linkedin.com/in/ramandeep-singh-makkar) [<img align="center" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" height="15" width="20" />](mailto:ramandeepsinghmakkar199@gmail.com)
-</h3> in an Event <b> Clear Vision</b> hosted by <i>Center of Excellence in Artificial Intelligence for Education (CoE-AIE) at JUIT</i>
+</h3> in an Event <b> Clear Vision</b> hosted by <i>Center of Excellence in Artificial Intelligence for Education (CoE-AIE) at JUIT</i>.
 
 ---------------------------------------------------------------
 
