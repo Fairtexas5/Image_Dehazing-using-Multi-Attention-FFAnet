@@ -1,7 +1,7 @@
 # Image_Dehazing-using-Multi-Attention-FFAnet (Clear Vision)
  
 ---------------------------------------------------------------
-### A project made by **Aditya Singh** [![LinkedIn](https://github.com/CLorant/readme-social-icons/blob/main/large/filled/linkedin.svg)](http://www.linkedin.com/in/aditsg26) <a href="mailto:aditsg26@gmail.com"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" height="15" width="15"></a> and **Ramandeep Singh Makkar** [![LinkedIn](https://github.com/CLorant/readme-social-icons/blob/main/large/filled/linkedin.svg)](https://www.linkedin.com/in/ramandeep-singh-makkar) <a href="mailto:ramandeepsinghmakkar199@gmail.com"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" height="15" width="15"></a>
+### A project made by **Aditya Singh** [![LinkedIn](https://github.com/CLorant/readme-social-icons/blob/main/large/filled/linkedin.svg)](http://www.linkedin.com/in/aditsg26) <a href="mailto:aditsg26@gmail.com"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" height="15" width="20"></a> and **Ramandeep Singh Makkar** [![LinkedIn](https://github.com/CLorant/readme-social-icons/blob/main/large/filled/linkedin.svg)](https://www.linkedin.com/in/ramandeep-singh-makkar) <a href="mailto:ramandeepsinghmakkar199@gmail.com"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" height="15" width="20"></a>
 
 
 <h3 class="heading_test">A project made by 
