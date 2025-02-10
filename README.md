@@ -4,6 +4,8 @@
 <h3 class="heading_test">A project made by 
 <a href="https://www.linkedin.com/in/aditsg26/" target="_blank" rel="noopener noreferrer">Aditya Singh</a> and 
 <a href="https://www.linkedin.com/in/ramandeep-singh-makkar" target="_blank" rel="noopener noreferrer">Ramandeep Singh Makkar</a>
+
+ 
 ---------------------------------------------------------------
 
 Our proposed FFA model is trained on <a href="https://www.kaggle.com/datasets/balraj98/indoor-training-set-its-residestandard" target="_blank" rel="noopener noreferrer">RESIDE Dataset</a>
