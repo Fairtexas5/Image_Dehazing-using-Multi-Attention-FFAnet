@@ -7,7 +7,7 @@
 
  
 ---------------------------------------------------------------
-
+<a href="[https://www.linkedin.com/in/aditsg26/](https://huggingface.co/spaces/Adieee5/Simple-Image-Dehazing)" target="_blank" rel="noopener noreferrer">Click here to see the Live Link</a>
 Our proposed FFA model is trained on <a href="https://www.kaggle.com/datasets/balraj98/indoor-training-set-its-residestandard" target="_blank" rel="noopener noreferrer">RESIDE Dataset</a>
 
 The results formulated below are from 
